@@ -2,9 +2,9 @@ import { Box, Grid } from "@mui/material";
 import { Container } from "@mui/system";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
-import PokemonCard from "../components/PokemonCard";
+import PokemonCard from "../components/PokemonCard/PokemonCard";
 import { Skeletons } from "../components/Skeletons";
 
 export const Home = ({ setPokemonData }) => {
@@ -45,6 +45,7 @@ export const Home = ({ setPokemonData }) => {
   return (
     <div>
       <Navbar pokemonFilter={pokemonFilter} />
+     
       <Container maxWidth={false}>
         <Grid container spacing={3}>
           {pokemons.length === 0 ? (

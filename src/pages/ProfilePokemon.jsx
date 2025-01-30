@@ -1,11 +1,11 @@
 import { Chip, Container, Divider, Paper, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React, { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import {navigate, useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
-import PokemonTable from "../components/PokemonTable";
+import PokemonTable from "../components/PokemonTable/PokemonTable";
 
-export const Profile = ({ pokemonData }) => {
+export const ProfilePokemon = ({ pokemonData }) => {
   
 
   const { name, sprites, moves } = pokemonData || {};

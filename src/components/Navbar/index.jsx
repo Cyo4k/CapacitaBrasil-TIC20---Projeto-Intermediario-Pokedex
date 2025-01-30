@@ -9,6 +9,7 @@ import InputBase from "@mui/material/InputBase";
 import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
 import { useNavigate } from "react-router-dom";
+import { Button } from '@mui/material';
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -58,16 +59,44 @@ export default function Navbar({ pokemonFilter, hideSearch }) {
     <Box sx={{ flexGrow: 1, marginBottom: "2em" }}>
       <AppBar position="static" sx={{ backgroundColor: "black" }}>
         <Toolbar>
-          <Box display="flex" justifyContent="space-between" width="100%">
+          <Box display="flex" justifyContent="space-between" alignItems="center" width="100%">
             <Box component="img" src="/assets/pokemon-logo.png" height="3em" sx={{ cursor: "pointer" }} onClick={() => navigate("/")} />
-            {!hideSearch && (
-              <Search onChange={(e) => pokemonFilter(e.target.value)}>
-                <SearchIconWrapper>
-                  <SearchIcon />
-                </SearchIconWrapper>
-                <StyledInputBase placeholder="Pesquisando..." inputProps={{ "aria-label": "search" }} />
-              </Search>
-            )}
+            <Box display="flex" alignItems="center" gap={2}>
+              {!hideSearch && (
+                <Search onChange={(e) => pokemonFilter(e.target.value)}>
+                  <SearchIconWrapper>
+                    <SearchIcon />
+                  </SearchIconWrapper>
+                  <StyledInputBase placeholder="Pesquisando..." inputProps={{ "aria-label": "search" }} />
+                </Search>
+              )}
+              <Button 
+                variant="contained" 
+                sx={{ 
+                  backgroundColor: "white", 
+                  color: "black",
+                  '&:hover': {
+                    backgroundColor: "#f5f5f5"
+                  }
+                }}
+                onClick={() => navigate("../pages/Login")}
+              >
+                Login
+              </Button>
+              <Button 
+                variant="contained" 
+                sx={{ 
+                  backgroundColor: "white", 
+                  color: "black",
+                  '&:hover': {
+                    backgroundColor: "#f5f5f5"
+                  }
+                }}
+                onClick={() => navigate("/Cadastro")}
+              >
+                Cadastro
+              </Button>
+            </Box>
           </Box>
         </Toolbar>
       </AppBar>
