@@ -51,36 +51,22 @@ export const ProfilePokemon = ({ pokemonData }) => {
                         >
                             <Box
                                 component="img"
-                                src={sprites.other.dream_world.front_default}
+                                src={sprites.other["official-artwork"].front_default}
                                 width="50%"
                                 height="100%"
                             />
                             <PokemonTable pokemonData={pokemonData} />
                         </Box>
-                        <Box width="50%">
+                        <Box >
                             <Divider>Variações</Divider>
-                            <Box display="flex" justifyContent="space-between">
+                            <Box display="flex" justifyContent="center">
                                 <Box
                                     component="img"
-                                    src={sprites.other.showdown.front_female}
+                                    src={sprites.other["official-artwork"].front_shiny}
                                     width="25%"
                                     height="25%"
                                 />
-                                <Box
-                                    component="img"
-                                    src={sprites.other.showdown.front_shiny}
-                                    width="25%"
-                                    height="25%"
-                                />
-                                <Box
-                                    component="img"
-                                    src={
-                                        sprites.other.showdown
-                                            .front_shiny_female
-                                    }
-                                    width="25%"
-                                    height="25%"
-                                />
+                              
                             </Box>
                             <Divider>Ataques</Divider>
                             <Box textAlign="center" marginTop="15px">

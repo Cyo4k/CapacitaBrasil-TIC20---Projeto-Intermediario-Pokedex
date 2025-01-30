@@ -57,7 +57,7 @@ export default function Navbar({ pokemonFilter, hideSearch }) {
   const navigate = useNavigate();
   return (
     <Box sx={{ flexGrow: 1, marginBottom: "2em" }}>
-      <AppBar position="static" sx={{ backgroundColor: "black" }}>
+      <AppBar position="static" sx={{ backgroundColor: "" }}>
         <Toolbar>
           <Box display="flex" justifyContent="space-between" alignItems="center" width="100%">
             <Box component="img" src="/assets/pokemon-logo.png" height="3em" sx={{ cursor: "pointer" }} onClick={() => navigate("/")} />

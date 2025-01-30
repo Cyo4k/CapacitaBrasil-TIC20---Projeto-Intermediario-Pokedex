@@ -3,19 +3,15 @@
   
 }
 body {
-  background-color: #878a92;
+  background-color: #dbe3f8;
 }
 
  
 
 .card-content {
-  background-color: rgb(243, 243, 243);
+  background-color: rgb(242, 244, 252);
 
 
-}
-.card-content .bug {
-  background-color: green;
-  
 }
 
 .card:hover {

@@ -14,11 +14,11 @@ export default function PokemonCard({ name, image, types }) {
     const pokemonName = capitalizeFirstLetter(name);
 
     return (
-        <Card className="card" sx={{ maxWidth: 345 }}>
+        <Card className="card" sx={{ maxWidth: 355 }}>
             <CardActionArea>
                 <CardMedia
                     component="img"
-                    height="250"
+                    height="280"
                     image={image}
                     alt="green iguana"
                 />

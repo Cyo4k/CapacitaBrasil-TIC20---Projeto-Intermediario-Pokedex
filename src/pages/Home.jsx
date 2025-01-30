@@ -17,7 +17,7 @@ export const Home = ({ setPokemonData }) => {
 
     const getPokemons = () => {
         var endpoints = [];
-        for (var i = 1; i < 400; i++) {
+        for (var i = 1; i < 150; i++) {
             endpoints.push(`https://pokeapi.co/api/v2/pokemon/${i}/`);
         }
         axios
@@ -63,7 +63,8 @@ export const Home = ({ setPokemonData }) => {
                                     <PokemonCard
                                         name={pokemon.data.name}
                                         image={
-                                            pokemon.data.sprites.front_default
+                                            pokemon.data.sprites.other["official-artwork"]
+                                                .front_default
                                         }
                                         types={pokemon.data.types}
                                     />
