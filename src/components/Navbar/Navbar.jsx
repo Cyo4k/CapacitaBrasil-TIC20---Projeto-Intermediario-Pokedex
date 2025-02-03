@@ -40,7 +40,6 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   color: "inherit",
   "& .MuiInputBase-input": {
     padding: theme.spacing(1, 1, 1, 0),
-    // vertical padding + font size from searchIcon
     paddingLeft: `calc(1em + ${theme.spacing(4)})`,
     transition: theme.transitions.create("width"),
     width: "100%",
@@ -60,14 +59,23 @@ export default function Navbar({ pokemonFilter, hideSearch }) {
       <AppBar position="static" sx={{ backgroundColor: "" }}>
         <Toolbar>
           <Box display="flex" justifyContent="space-between" alignItems="center" width="100%">
-            <Box component="img" src="/assets/pokemon-logo.png" height="3em" sx={{ cursor: "pointer" }} onClick={() => navigate("/")} />
+            <Box 
+              component="img" 
+              src="/assets/pokemon-logo.png" 
+              height="3em" 
+              sx={{ cursor: "pointer" }} 
+              onClick={() => navigate("/")} 
+            />
             <Box display="flex" alignItems="center" gap={2}>
               {!hideSearch && (
                 <Search onChange={(e) => pokemonFilter(e.target.value)}>
                   <SearchIconWrapper>
                     <SearchIcon />
                   </SearchIconWrapper>
-                  <StyledInputBase placeholder="Pesquisando..." inputProps={{ "aria-label": "search" }} />
+                  <StyledInputBase 
+                    placeholder="Pesquisando..." 
+                    inputProps={{ "aria-label": "search" }} 
+                  />
                 </Search>
               )}
               <Button 
@@ -79,7 +87,7 @@ export default function Navbar({ pokemonFilter, hideSearch }) {
                     backgroundColor: "#f5f5f5"
                   }
                 }}
-                onClick={() => navigate("../pages/Login")}
+                onClick={() => navigate("/login")}
               >
                 Login
               </Button>
@@ -92,7 +100,7 @@ export default function Navbar({ pokemonFilter, hideSearch }) {
                     backgroundColor: "#f5f5f5"
                   }
                 }}
-                onClick={() => navigate("/Cadastro")}
+                onClick={() => navigate("/cadastro")}
               >
                 Cadastro
               </Button>
